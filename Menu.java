@@ -33,6 +33,7 @@ public class Menu {
 
 
             try {
+                //Creates an array with as many lines as there are puzzle files.  Sets the score for each puzzle to zero.
                 Path path = Paths.get("Scores.txt");
                 List<String> lines = new LinkedList<String>();
                 for (int j = 0; j < fileList.size(); j++) {
@@ -47,6 +48,7 @@ public class Menu {
 
             do {
 
+                //Prints out the selection menu
                 for (i = 0; i < fileList.size(); i++) {
                     System.out.println(i + 1 + ") " + fileList.get(i).getName());
                 }
@@ -56,9 +58,9 @@ public class Menu {
                 System.out.println("Score: " + totalComplete() + "/" + i);
 
                 Scanner sc = new Scanner(System.in);
-                System.out.println("Choose puzzle: ");
+                System.out.print("Choose puzzle: ");
 
-                levelNumber = sc.nextInt()-1;
+                levelNumber = sc.nextInt()-1; //Reads input from the user
 
                 if (levelNumber == i) {
                     //Explain the instructions
@@ -85,7 +87,7 @@ public class Menu {
                     return;
                 }
 
-            } while (levelNumber != i+2); //Keeps the loop running
+            } while (levelNumber != i+2); //Keeps the loop running as long as the user doesn't select exit
 
         } catch (IOException e) {
             System.out.println("Error in Menu");
@@ -97,6 +99,7 @@ public class Menu {
     private static int isComplete(int n) {
 
         try {
+            //Creates an arraylist of strings.  Returns the first character of the line corresponding to the requested puzzle.
             Path path = Paths.get("Scores.txt");
             List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
             return lines.get(n).charAt(0) - 48;
@@ -108,8 +111,10 @@ public class Menu {
 
     private static int totalComplete() {
         try {
+            //Creates a list containing a string representing each line in the score file
             Path path = Paths.get("Scores.txt");
             List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
+            //Adds up the scores for each puzzle
             int total = 0;
             for (int i = 0; i < lines.size(); i++) {
                 total += lines.get(i).charAt(0) - 48;
@@ -123,6 +128,7 @@ public class Menu {
 
     private static int updateScore(int level, int score) {
         try {
+            //Reads the score file to a list.  Sets the line corresponding to the level that needs to be changed to the score, then writes the list to the file.
             Path path = Paths.get("Scores.txt");
             List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);
             lines.set(level, score+"");
