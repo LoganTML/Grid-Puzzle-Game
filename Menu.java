@@ -33,6 +33,7 @@ public class Menu {
 
 
             try {
+                //Creates an array with as many lines as there are puzzle files.  Sets the score for each puzzle to zero.
                 Path path = Paths.get("Scores.txt");
                 List<String> lines = new LinkedList<String>();
                 for (int j = 0; j < fileList.size(); j++) {
