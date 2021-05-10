@@ -1,0 +1,6 @@
+3 9
+0 1
+1 0
+oooooooob
+ooooooooo
+ooooooobo
