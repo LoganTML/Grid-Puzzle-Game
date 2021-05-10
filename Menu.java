@@ -48,6 +48,7 @@ public class Menu {
 
             do {
 
+                //Prints out the selection menu
                 for (i = 0; i < fileList.size(); i++) {
                     System.out.println(i + 1 + ") " + fileList.get(i).getName());
                 }
@@ -57,7 +58,7 @@ public class Menu {
                 System.out.println("Score: " + totalComplete() + "/" + i);
 
                 Scanner sc = new Scanner(System.in);
-                System.out.println("Choose puzzle: ");
+                System.out.print("Choose puzzle: ");
 
                 levelNumber = sc.nextInt()-1;
 
