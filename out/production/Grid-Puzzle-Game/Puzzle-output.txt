@@ -1,0 +1,105 @@
+Going through the puzzle from the start: (0, 1) to finish: (1, 0)
+
+ 012345678
+0oxoooooob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 2) to finish: (1, 0)
+
+ 012345678
+0ooxooooob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 3) to finish: (1, 0)
+
+ 012345678
+0oooxoooob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 4) to finish: (1, 0)
+
+ 012345678
+0ooooxooob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 5) to finish: (1, 0)
+
+ 012345678
+0oooooxoob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 6) to finish: (1, 0)
+
+ 012345678
+0ooooooxob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 7) to finish: (1, 0)
+
+ 012345678
+0oooooooxb
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 7) to finish: (1, 0)
+
+ 012345678
+0oooooooxb
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 6) to finish: (1, 0)
+
+ 012345678
+0ooooooxob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 5) to finish: (1, 0)
+
+ 012345678
+0oooooxoob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 4) to finish: (1, 0)
+
+ 012345678
+0ooooxooob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 3) to finish: (1, 0)
+
+ 012345678
+0oooxoooob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 2) to finish: (1, 0)
+
+ 012345678
+0ooxooooob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 1) to finish: (1, 0)
+
+ 012345678
+0oxoooooob
+1zoooooooo
+2ooooooobo
+
+Going through the puzzle from the start: (0, 0) to finish: (1, 0)
+
+ 012345678
+0xooooooob
+1zoooooooo
+2ooooooobo
+

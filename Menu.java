@@ -50,12 +50,18 @@ public class Menu {
 
                 //Prints out the selection menu
                 for (i = 0; i < fileList.size(); i++) {
-                    System.out.println(i + 1 + ") " + fileList.get(i).getName());
+                    System.out.print(i + 1 + ") " + fileList.get(i).getName());
+                    int c = isComplete(i);
+                    if (c != 0) {
+                        System.out.print(" - " + c);  //Prints score if level is complete
+                    }
+                    System.out.println();
                 }
+
                 System.out.println(i+1 + ") Help");
-                System.out.println(i + 2 + ") Settings");
-                System.out.println(i + 3 + ") Exit");
-                System.out.println("Score: " + totalComplete() + "/" + i);
+                System.out.println(i+2 + ") Settings");
+                System.out.println(i+3 + ") Exit");
+                System.out.println("Score: " + totalComplete() + "/" + i); //Show which are completed
 
                 Scanner sc = new Scanner(System.in);
                 System.out.print("Choose puzzle: ");
