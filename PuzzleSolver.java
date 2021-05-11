@@ -123,8 +123,19 @@ public class PuzzleSolver {
 //                return false;
 //            }
 
-        if (newLocation.getRow() < 0 || newLocation.getRow() > puzzleToSolve.getRows() || newLocation.getCol() < 0 || newLocation.getRow() > puzzleToSolve.getRows()) {
-            System.out.println("Left boundaries");
+
+        //Checks whether the new location is within the bounds of the puzzle
+        if (newLocation.getRow() < 0) {
+            System.out.println("Upper boundary reached");
+            return 0;
+        } else if (newLocation.getRow() > puzzleToSolve.getRows()-1) {
+            System.out.println("Lower boundary reached");
+            return 0;
+        } else if (newLocation.getCol() < 0) {
+            System.out.println("Left boundary reached");
+            return 0;
+        } else if (newLocation.getCol() > puzzleToSolve.getCols()-1) {
+            System.out.println("Right boundary reached");
             return 0;
         }
 

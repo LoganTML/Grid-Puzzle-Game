@@ -20,7 +20,7 @@ public class Puzzle {
     }
 
     public char getChar(int row, int col) {
-        return puzzleData[row][col];
+            return puzzleData[row][col];
     }
 
     public void setChar(int row, int col, char val) {
