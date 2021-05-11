@@ -8,9 +8,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Scanner;
 import java.io.FileWriter;
-import java.io.FileReader;
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.util.LinkedList;
 
 public class Menu {
@@ -84,12 +81,27 @@ public class Menu {
                     if (levelScore > isComplete(levelNumber)) {
                         updateScore(levelNumber, levelScore);
                     }
+                } else if (levelNumber == 31414) {
+                    try {
+                        //Immediately ends the game as a win
+                        Path path = Paths.get("Scores.txt");
+                        List<String> lines = new LinkedList<String>();
+                        for (int j = 0; j < fileList.size(); j++) {
+                            lines.add("1");
+                        }
+                        Files.write(path, lines, StandardCharsets.UTF_8);
+                        System.out.println("\nImagine using cheat codes in 2021");
+                    } catch (IOException e) {
+                        System.out.println("Error setting up scores document");
+                        return;
+                    }
                 } else {
                     System.out.println("Number unrecognized, please try again");
                 }
 
+                //Ends the game if the user has completed every available puzzle
                 if (totalComplete() == i) {
-                    System.out.println("Game over!");
+                    System.out.println("\n--- All puzzles complete -- Game over ---");
                     return;
                 }
 
@@ -132,7 +144,7 @@ public class Menu {
         return 0;
     }
 
-    private static int updateScore(int level, int score) {
+    private static void updateScore(int level, int score) {
         try {
             //Reads the score file to a list.  Sets the line corresponding to the level that needs to be changed to the score, then writes the list to the file.
             Path path = Paths.get("Scores.txt");
@@ -142,7 +154,7 @@ public class Menu {
         } catch (IOException e) {
             System.out.println("Error reading Scores.txt");
         }
-        return 0;
+        return;
     }
 
 }
