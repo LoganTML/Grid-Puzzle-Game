@@ -12,7 +12,7 @@ public class Level {
             return 0;
         }
 
-        System.out.println("Beginning Level "+puzzleFile);
+        System.out.println("Beginning Level: "+puzzleFile.substring(8)); //Edit so it doesn't say puzzles/
         Puzzle puzzle = initialize(puzzleFile);
         PuzzleSolver ps = new PuzzleSolver(puzzle);
         PuzzleLocation st = new PuzzleLocation(puzzle.getStart().getRow(), puzzle.getStart().getCol());
